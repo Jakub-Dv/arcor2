@@ -4,11 +4,11 @@ python_requirements(
             "PyYAML": ["yaml"],
             "Pillow": ["PIL"],
             "lru-dict": ["lru"],
-            "opencv-contrib-python": ["cv2"],
+            "opencv-python": ["cv2"],
             "websocket-client": ["websocket"],
             "pyhumps": ["humps"],
             "pyserial": ["serial"],
-            "pyk4a-bundle": ["pyk4a"]
+            "git+https://github.com/nathantsoi/pyk4a.git@feature/body-tracking#egg=pyk4a": ["pyk4a"],
           },
     overrides={
         "apispec-webframeworks": {"dependencies": [":setuptools", ":Flask"]},  # https://github.com/marshmallow-code/apispec-webframeworks/issues/99

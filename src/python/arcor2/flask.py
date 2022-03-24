@@ -1,5 +1,6 @@
 import json
 import logging
+from http import HTTPStatus
 from typing import Optional, Union
 
 from apispec import APISpec
@@ -20,6 +21,13 @@ class FlaskException(Arcor2Exception):
     def __init__(self, *args, error_code: int):
         super().__init__(*args)
         self.error_code = error_code
+
+
+class DataclassResponse(Response):
+    def __init__(
+        self, dataclass: JsonSchemaMixin, status: int = HTTPStatus.OK, mimetype: str = "application/json", **kwargs
+    ) -> None:
+        super().__init__(response=dataclass.to_json(), status=status, mimetype=mimetype, **kwargs)
 
 
 def create_app(import_name: str) -> Flask:

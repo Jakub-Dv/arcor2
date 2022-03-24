@@ -16,3 +16,16 @@ sudo udevadm control --reload-rules && udevadm trigger
 - `ARCOR2_KINECT_AZURE_URL=http://localhost:5016` - by default, the service listens on port 5016.
 - `ARCOR2_KINECT_AZURE_MOCK=1` - the service will start in a mock (simulator) mode.
 - `ARCOR2_REST_API_DEBUG=1` - turns on Flask debugging (logs each endpoint call).
+
+
+TODO:
+=====
+
+- add dummy pyk4a capture
+- api tests with dummy app
+- remote configuration and reload
+- add rotation speed
+- api for getting distance from camera
+- compute speed based on distance from camera
+- add unit and calibrate for speed
+- improve internal errors by propagating them through http codes
