@@ -17,9 +17,10 @@ RUN apt-get update \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["/bin/app/pex"]
 COPY --from=deps /bin/app /bin/app
 COPY --from=srcs /bin/app /bin/app
 
+ENTRYPOINT ["/bin/app/pex"]
+
 EXPOSE 5016
-HEALTHCHECK --interval=5s --start-period=60s CMD curl -f http://localhost:5016/healthz/ready || exit 1
+HEALTHCHECK --interval=5s --start-period=60s CMD curl -f http://localhost:5016/healthcheck || exit 1

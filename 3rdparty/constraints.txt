@@ -35,7 +35,7 @@
 //     "orjson~=3.8.8",
 //     "packaging~=21.3",
 //     "pyhumps==3.8.0",
-//     "pyk4a~=1.5.0",
+//     "pyk4a@ git+https://github.com/Jakub-Dv/pyk4a.git@feature/body-tracking",
 //     "pyserial~=3.5",
 //     "pytest-asyncio~=0.21.0",
 //     "pytest-randomly~=3.12.0",
@@ -2813,8 +2813,8 @@
           "artifacts": [
             {
               "algorithm": "sha256",
-              "hash": "57e1c69a39e936e1610771401ad68f0c9b3788d14c2f4998678854904d3c2d1b",
-              "url": "https://files.pythonhosted.org/packages/5a/f9/92c3f43caf0a8ad5ca1414be0096b8e046604a90cabe84f12173794ac130/pyk4a-1.5.0.tar.gz"
+              "hash": "ba64b87b6fed6472569915950061c29b34b5a6a7ee6fa75c99daf1dc6318574c",
+              "url": "git+https://github.com/Jakub-Dv/pyk4a.git@feature/body-tracking"
             }
           ],
           "project_name": "pyk4a",
@@ -2822,7 +2822,7 @@
             "numpy"
           ],
           "requires_python": ">=3.4",
-          "version": "1.5.0"
+          "version": "1.1.0"
         },
         {
           "artifacts": [
@@ -3907,7 +3907,7 @@
     "orjson~=3.8.8",
     "packaging~=21.3",
     "pyhumps==3.8.0",
-    "pyk4a~=1.5.0",
+    "pyk4a",
     "pyserial~=3.5",
     "pytest-asyncio~=0.21.0",
     "pytest-randomly~=3.12.0",
